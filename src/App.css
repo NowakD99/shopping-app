@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#container { 
+  width: 800px;
+  background-color: rgb(172, 248, 100);
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  height: 60px;
+}
+#search {
+  height: 100%;
+  flex-grow: 1;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+#search form {
+  margin: 8px 2%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+#search form input {
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+  font-size: 32px;
+}
+#search form select {
+  width: 30%;
+  height: 80%;
+  border-radius: 10px;
+  font-size: 32px;
+  margin-left: 5%;
+}
+#basket {
+  width: 60px;
+  background-color: red;
+}
