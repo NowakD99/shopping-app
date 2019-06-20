@@ -3,9 +3,9 @@ import React from 'react';
 const Item = props => {
     //import picture from `./pictures/${props.path}`
     return (
-        <div className="item">
-            <img src={props.path}></img>
-            <p>{props.namePl + "-" + props.nameEng + "-" + props.type}</p>
+        <div className="item" value={props.id}>
+            <img src={props.path} alt={props.nameEng} name={props.id} onClick={props.click}></img>
+            <p name={props.id} value={props.id} onClick={props.click}>{props.nameEng}</p>
         </div>);
 }
 
