@@ -3,6 +3,7 @@ import './App.css';
 import Search from './search.js';
 import Basket from './basket.js';
 import ListItems from './listItems.js';
+import ShoppingList from './shoppingList';
 
 class App extends React.Component {
   state = {
@@ -68,6 +69,19 @@ class App extends React.Component {
   }
   handleBasketClick = (e) => {
     console.log(this.state.basket)
+
+  }
+  handleRemoveClick = e => {
+    console.log(e.target.name)
+    const newBasketState = this.state.basket.map(item => {
+      if (item !== e.target.name)
+        return item
+      else
+        return null
+    })
+    this.setState({
+      basket: newBasketState,
+    })
   }
   render() {
     return (
@@ -76,6 +90,7 @@ class App extends React.Component {
           <Search text={this.state.inputText} change={this.handleChange}></Search>
           <Basket basketClick={this.handleBasketClick}></Basket>
         </header>
+        <ShoppingList listItems={this.state.basket} items={this.state.items} click={this.handleRemoveClick}></ShoppingList>
         <ListItems data={this.state.items} type={this.state.selectType} text={this.state.inputText} click={this.handleClick}></ListItems>
       </div>
     );

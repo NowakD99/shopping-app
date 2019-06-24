@@ -5,7 +5,7 @@ const Item = props => {
     return (
         <div className="item" value={props.id}>
             <img src={props.path} alt={props.nameEng} name={props.id} onClick={props.click}></img>
-            <p name={props.id} value={props.id} onClick={props.click}>{props.nameEng}</p>
+            <p name={props.id} value={props.id} onClick={props.click}>{props.namePl}</p>
         </div>);
 }
 
